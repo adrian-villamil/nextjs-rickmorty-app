@@ -1,0 +1,16 @@
+.header {
+  box-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 14px 16px;
+  float: left;
+}
+
+.link:hover, .link:active {
+  background-color: rgb(151, 206, 76);
+}
