@@ -1,5 +1,12 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
   box-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+.navbar {
+  display: flex;
 }
 
 .link {
@@ -8,9 +15,48 @@
   font-size: 17px;
   font-weight: 500;
   padding: 14px 16px;
-  float: left;
 }
 
-.link:hover, .link:active {
+.button {
+  display: none;
+  font-size: 17px;
+  padding: 0 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.link:hover:not(.active), .button:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+.link.active {
   background-color: rgb(151, 206, 76);
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    position: relative;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;  
+    left: 0;
+    top: 101%;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 2px rgb(0, 0, 0);
+  }
+
+  .navbar.responsive {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -1,4 +1,6 @@
 .card-container {
+  display: flex;
+  flex-direction: column;
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -9,30 +11,80 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.image {
+.card-image {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
 .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 5px 16px;
-  overflow-wrap: break-word;
 }
 
-.link {
+.card-link {
+  display: block;
   text-decoration: none;
+  text-align: center;
+  text-wrap: balance;
   color: rgb(72, 168, 27);
   font-size: 1.3em;
   font-weight: 700;
-  text-align: center;
 }
 
-.link:hover {
-  color: rgb(139, 207, 33);
+.card-link:hover {
+  color: rgb(126, 182, 35);
 }
 
 .card-info {
   display: flex;
+  flex-direction: column;
+}
+
+.card-info div {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.card-info div > span:first-child {
+  font-weight: 600;
+  color: rgb(110, 110, 110);
+}
+
+.gender, .status {
+  display: flex;
+  align-items: center;
+}
+
+.gender svg, .status svg {
+  margin-right: 5px;
+}
+
+.Female svg {
+  color: rgb(255,105,180);
+}
+
+.Male svg {
+  color: rgb(0,191,255);
+}
+
+.Genderless svg {
+  color: rgb(131, 131, 131);
+}
+
+.Alive svg {
+  color: rgb(75, 150, 9);
+}
+
+.Dead svg {
+  color: rgb(223, 28, 34);
+}
+
+.unknown svg {
+  color: rgb(51, 51, 51);
 }
