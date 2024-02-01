@@ -1,3 +1,12 @@
+:root {
+  --primary-green: #00cc00; /* Rick and Morty Green */
+  --portal-blue: #0033cc; /* Portal Blue */
+  --galactic-purple: #9900cc; /* Galactic Purple */
+  --morty-yellow: #ffd700; /* Morty Yellow */
+  --neutral-background: #f8f8f8; /* Neutral Background */
+  --accent-red: #ff0000; /* Accent Red */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,8 +17,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--neutral-background);
 }
 
 main {
   flex: 1;
+}
+
+main>h1 {
+  text-align: center;
+  font-size: 4em;
+  color: var(--primary-green);
+}
+
+@media screen and (max-width: 350px) {
+  main>h1 {
+    font-size: 3em;
+  }
 }
