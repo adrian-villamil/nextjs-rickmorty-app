@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getCharacters } from '../api/data';
-import { CharacterResponse } from '@/app/types/api-types';
+import { CharactersResponse } from '@/app/types/api-types';
 import CardList from '../components/CardList';
 import Pagination from '../components/Pagination';
 import styles from './characters.module.css';
@@ -17,7 +17,7 @@ export default async function Page({
   }
 }) {
   const currentPage = searchParams?.page || '1';
-  const { info, results } = await getCharacters(currentPage) as CharacterResponse;
+  const { info, results } = await getCharacters(currentPage) as CharactersResponse;
 
   return (
     <main className={styles.main}>
