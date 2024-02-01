@@ -1,13 +1,15 @@
 'use client';
 
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import ReactPaginate from "react-paginate";
 import styles from './pagination.module.css';
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function Pagination({
   pages,
+  currentPage,
 }: {
   pages: number,
+  currentPage: number,
 }) {
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -23,6 +25,7 @@ export default function Pagination({
     <div className={styles.container}>
       <ReactPaginate
         pageCount={pages}
+        forcePage={currentPage}
         onPageChange={handlePageChange}
         className={styles['react-paginate']}
       />
