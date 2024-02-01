@@ -26,7 +26,7 @@
   cursor: pointer;
 }
 
-.link:hover:not(.active), .button:hover {
+.link:hover:not(.link.active), .button:hover {
   background-color: rgb(197, 197, 197);
 }
 
@@ -55,7 +55,7 @@
     box-shadow: 0 0 2px rgb(0, 0, 0);
   }
 
-  .navbar.responsive {
+  .navbar.mobile {
     display: flex;
     flex-direction: column;
   }

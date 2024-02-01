@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import styles from './header.module.css';
 import { usePathname } from 'next/navigation';
-import { FaBars } from "react-icons/fa";
+import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { useState } from 'react';
 
 const navLinks = [
@@ -15,15 +15,15 @@ const navLinks = [
 
 export default function Header() {
   const pathname = usePathname();
-  const [isResponsive, setIsResponsive] = useState<boolean>(false);
+  const [isOpenMobileNav, setOpenMobileNav] = useState<boolean>(false);
 
   const handleButtonClick = () => {
-    setIsResponsive(prevState => !prevState);
+    setOpenMobileNav(prevState => !prevState);
   };
 
   const handleLinkClick = () => {
-    if (isResponsive) {
-      setIsResponsive(false);
+    if (isOpenMobileNav) {
+      setOpenMobileNav(false);
     }
   }
 
@@ -36,7 +36,7 @@ export default function Header() {
         LOGO
       </Link>
       <nav
-        className={isResponsive ? `${styles.navbar} ${styles.responsive}` : `${styles.navbar}`}
+        className={isOpenMobileNav ? `${styles.navbar} ${styles.mobile}` : `${styles.navbar}`}
       >
         {navLinks.map((navLink) => (
           <Link
@@ -56,7 +56,7 @@ export default function Header() {
         className={styles.button}
         onClick={handleButtonClick}
       >
-        <FaBars />
+        {isOpenMobileNav ? <RxCross1 /> : <RxHamburgerMenu />}
       </button>
     </header>
   );
