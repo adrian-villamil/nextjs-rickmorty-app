@@ -1,7 +1,9 @@
+import { creepster } from "../fonts";
+
 export default function Page() {
   return (
     <main>
-      <h1>Episodes Page</h1>
+      <h1 className={creepster.className}>Episodes</h1>
     </main>
   );
 }

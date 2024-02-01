@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { creepster } from "@/app/fonts";
 import { Character } from "@/app/types/api-types";
 import { FaHeart, FaSkull, FaQuestionCircle } from "react-icons/fa";
 import { IoMdFemale, IoMdMale } from "react-icons/io";
@@ -37,7 +38,7 @@ export default function CardItem({
       <div className={styles['card-content']}>
         <Link
           href={`/characters/character-info/${character.id}`}
-          className={styles['card-link']}
+          className={`${styles['card-link']} ${creepster.className}`}
         >
           {character.name}
         </Link>
@@ -56,18 +57,6 @@ export default function CardItem({
               {character.status}
             </span>
           </div>
-          {/* <span
-            className={`${styles.gender} ${styles[character.gender]}`}
-          >
-            {gender[character.gender]}
-            {character.gender}
-          </span>
-          <span
-            className={`${styles.status} ${styles[character.status]}`}
-          >
-            {status[character.status]}
-            {character.status}
-          </span> */}
         </div>
       </div>
     </div>
