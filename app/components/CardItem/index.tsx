@@ -36,7 +36,7 @@ export default function CardItem({
       />
       <div className={styles['card-content']}>
         <Link
-          href={'/characters/character/'}
+          href={`/characters/character-info/${character.id}`}
           className={styles['card-link']}
         >
           {character.name}
