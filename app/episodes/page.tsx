@@ -1,3 +1,7 @@
 export default function Page() {
-  return <h1>Episodes Page</h1>;
+  return (
+    <main>
+      <h1>Episodes Page</h1>
+    </main>
+  );
 }
