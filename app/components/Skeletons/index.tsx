@@ -1,25 +1,32 @@
+import { creepster } from '@/app/fonts';
 import styles from './skeletons.module.css';
 
-export function CardSkeleton() {
+export function CardItemSkeleton() {
   return (
     <div className={styles['card-container']}>
       <div className={styles['card-image']}></div>
       <div className={styles['card-content']}>
         <div className={styles['card-link']}></div>
         <div className={styles['card-info']}>
-          <div className={styles['card-spans']}></div>
-          <div className={styles['card-spans']}></div>
+          <div>
+            <div className={styles['card-spans']}></div>
+            <div className={styles['card-spans']}></div>
+          </div>
+          <div>
+            <div className={styles['card-spans']}></div>
+            <div className={styles['card-spans']}></div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export function CardsSkeleton() {
+export function CardListSkeleton() {
   return (
     <div className={styles['cardlist-container']}>
       {Array.from(Array(20).keys()).map((element) => (
-        <CardSkeleton key={element} />
+        <CardItemSkeleton key={element} />
       ))}
     </div>
   );
@@ -28,8 +35,8 @@ export function CardsSkeleton() {
 export function CharactersLoadingSkeleton() {
   return (
     <main className={styles.main}>
-      <h1>Characters Page</h1>
-      <CardsSkeleton />
+      <h1 className={creepster.className}>Characters</h1>
+      <CardListSkeleton />
     </main>
   );
 }
