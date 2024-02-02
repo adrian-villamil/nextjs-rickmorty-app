@@ -17,7 +17,7 @@ export default async function Page({
     page?: string;
   }
 }) {
-  const currentPage = Number(searchParams?.page || '1');
+  const currentPage = searchParams?.page || '1';
   const { info, results } = await getAllCharacters(currentPage) as CharactersResponse;
 
   return (
@@ -26,7 +26,7 @@ export default async function Page({
       <CardList characters={results} />
       <Pagination
         pages={info.pages}
-        currentPage={currentPage - 1}
+        currentPage={Number(currentPage) - 1}
       />
     </main>
   );
