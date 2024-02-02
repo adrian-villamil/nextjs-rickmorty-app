@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--neutral-background);
   transition: 0.3s;
   border-radius: 5px;
 }
@@ -30,13 +31,13 @@
   text-decoration: none;
   text-align: center;
   text-wrap: balance;
-  color: rgb(72, 168, 27);
-  font-size: 1.3em;
-  font-weight: 700;
+  color: var(--primary-green);
+  font-size: 1.5em;
 }
 
 .card-link:hover {
-  color: rgb(126, 182, 35);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .card-info {
