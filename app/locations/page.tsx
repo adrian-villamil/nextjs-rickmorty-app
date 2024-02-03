@@ -20,7 +20,9 @@ export default async function Page({
       <h1 className={creepster.className}>Locations</h1>
       <div className={styles.list}>
         {results.map((location) => (
-          <LocationCard location={location} />
+          <LocationCard
+            key={location.id}
+            location={location} />
         ))}
       </div>
       <Pagination

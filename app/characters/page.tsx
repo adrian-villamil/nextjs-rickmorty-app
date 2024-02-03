@@ -25,7 +25,9 @@ export default async function Page({
       <h1 className={creepster.className}>Characters</h1>
       <div className={styles.list}>
         {results.map((character) => (
-          <CardItem character={character} />
+          <CardItem
+            key={character.id}
+            character={character} />
         ))}
       </div>
       <Pagination
