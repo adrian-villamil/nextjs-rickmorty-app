@@ -1,9 +1,32 @@
+import { getAllLocations } from "../api/data";
+import { LocationsResponse } from "../types/api-types";
 import { creepster } from "../fonts";
+import LocationCard from "../components/LocationCard";
+import Pagination from "../components/Pagination";
+import styles from './locations.module.css';
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: {
+    page?: string,
+  },
+}) {
+  const currentPage = searchParams?.page || '1';
+  const { info, results } = await getAllLocations(currentPage) as LocationsResponse;
+
   return (
-    <main>
+    <main className={styles.main}>
       <h1 className={creepster.className}>Locations</h1>
+      <div className={styles.list}>
+        {results.map((location) => (
+          <LocationCard location={location} />
+        ))}
+      </div>
+      <Pagination
+        pages={info.pages}
+        currentPage={Number(currentPage) - 1}
+      />
     </main>
   );
 }

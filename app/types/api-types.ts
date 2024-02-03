@@ -29,4 +29,19 @@ export type Character = {
 export type CharactersResponse = {
   info: Info;
   results: Character[];
-}
+};
+
+export type Location = {
+  id: number;
+  name: string;
+  type: string;
+  dimension: string;
+  residents: string[];
+  url: string;
+  created: string;
+};
+
+export type LocationsResponse = {
+  info: Info;
+  results: Location[];
+};
