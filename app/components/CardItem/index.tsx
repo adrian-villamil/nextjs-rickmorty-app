@@ -27,17 +27,21 @@ export default function CardItem({
 }) {
   return (
     <div className={styles['card-container']}>
-      <Image
-        src={character.image}
-        alt={character.name}
-        width={300}
-        height={300}
-        priority
-        className={styles['card-image']}
-      />
+      <Link
+        href={`/characters/${character.id}`}
+      >
+        <Image
+          src={character.image}
+          alt={character.name}
+          width={300}
+          height={300}
+          priority
+          className={styles['card-image']}
+        />
+      </Link>
       <div className={styles['card-content']}>
         <Link
-          href={`/characters/character-info/${character.id}`}
+          href={`/characters/${character.id}`}
           className={`${styles['card-link']} ${creepster.className}`}
         >
           {character.name}
