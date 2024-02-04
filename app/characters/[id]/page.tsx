@@ -1,5 +1,4 @@
 import { getCharacterById } from "@/app/api/data";
-import { Character } from "@/app/types/api-types";
 
 export default async function Page({
   params
@@ -7,7 +6,7 @@ export default async function Page({
   params: { id: string }
 }) {
   const characterId = params.id;
-  const character = await getCharacterById(characterId) as Character;
+  const character = await getCharacterById(characterId);
 
   return (
     <main>
