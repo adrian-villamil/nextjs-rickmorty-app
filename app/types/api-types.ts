@@ -1,11 +1,11 @@
-export type Info = {
+export interface Info {
   count: number;
   pages: number;
   next: string | null;
   prev: string | null;
 };
 
-export type Character = {
+export interface Character {
   id: number;
   name: string;
   status: 'Alive' | 'Dead' | 'unknown';
@@ -26,12 +26,7 @@ export type Character = {
   created: string;
 };
 
-export type CharactersResponse = {
-  info: Info;
-  results: Character[];
-};
-
-export type Location = {
+export interface Location {
   id: number;
   name: string;
   type: string;
@@ -41,7 +36,7 @@ export type Location = {
   created: string;
 };
 
-export type LocationsResponse = {
+export interface ApiResponse<T> {
   info: Info;
-  results: Location[];
-};
+  results: T;
+}

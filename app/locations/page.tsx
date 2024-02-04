@@ -1,5 +1,4 @@
 import { getAllLocations } from "../api/data";
-import { LocationsResponse } from "../types/api-types";
 import { creepster } from "../fonts";
 import LocationCard from "../components/LocationCard";
 import Pagination from "../components/Pagination";
@@ -13,7 +12,7 @@ export default async function Page({
   },
 }) {
   const currentPage = searchParams?.page || '1';
-  const { info, results } = await getAllLocations(currentPage) as LocationsResponse;
+  const { info, results } = await getAllLocations(currentPage);
 
   return (
     <main className={styles.main}>

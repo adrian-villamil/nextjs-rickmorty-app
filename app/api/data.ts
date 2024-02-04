@@ -1,31 +1,33 @@
+import { ApiResponse, Character, Location } from "../types/api-types";
+
 const BASE_URL = 'https://rickandmortyapi.com/api';
 
-export async function getAllCharacters(currentPage: string) {
-  const res = await fetch(`${BASE_URL}/character/?page=${currentPage}`);
+export async function getAllCharacters(currentPage: string): Promise<ApiResponse<Character[]>> {
+  const response = await fetch(`${BASE_URL}/character/?page=${currentPage}`);
 
-  if (!res.ok) {
+  if (!response.ok) {
     throw new Error('Failed to fetch data.');
   }
 
-  return res.json();
+  return response.json();
 }
 
-export async function getCharacterById(characterId: string) {
-  const res = await fetch(`${BASE_URL}/character/${characterId}`);
+export async function getCharacterById(characterId: string): Promise<Character> {
+  const response = await fetch(`${BASE_URL}/character/${characterId}`);
 
-  if (!res.ok) {
+  if (!response.ok) {
     throw new Error('Failed to fetch data.');
   }
 
-  return res.json();
+  return response.json();
 }
 
-export async function getAllLocations(currentPage: string) {
-  const res = await fetch(`${BASE_URL}/location?page=${currentPage}`);
+export async function getAllLocations(currentPage: string): Promise<ApiResponse<Location[]>> {
+  const response = await fetch(`${BASE_URL}/location?page=${currentPage}`);
 
-  if (!res.ok) {
+  if (!response.ok) {
     throw new Error('Failed to fetch data.');
   }
 
-  return res.json();
+  return response.json();
 }

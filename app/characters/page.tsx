@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { getAllCharacters } from '../api/data';
-import { CharactersResponse } from '@/app/types/api-types';
 import { creepster } from '../fonts';
 import Pagination from '../components/Pagination';
 import styles from './characters.module.css';
@@ -18,7 +17,7 @@ export default async function Page({
   }
 }) {
   const currentPage = searchParams?.page || '1';
-  const { info, results } = await getAllCharacters(currentPage) as CharactersResponse;
+  const { info, results } = await getAllCharacters(currentPage);
 
   return (
     <main className={styles.main}>
