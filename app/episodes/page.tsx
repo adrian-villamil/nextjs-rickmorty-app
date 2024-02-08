@@ -18,7 +18,10 @@ export default async function Page({
       <h1 className={creepster.className}>Episodes</h1>
       <div className={styles.list}>
         {results.map((episode) => (
-          <EpisodeCard episode={episode} />
+          <EpisodeCard
+            key={episode.id}
+            episode={episode}
+          />
         ))}
       </div>
     </main>
