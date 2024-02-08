@@ -1,4 +1,4 @@
-import { ApiResponse, Character, Location } from "../types/api-types";
+import { ApiResponse, Character, Episode, Location } from "../types/api-types";
 
 const BASE_URL = 'https://rickandmortyapi.com/api';
 
@@ -24,6 +24,16 @@ export async function getCharacterById(characterId: string): Promise<Character> 
 
 export async function getAllLocations(currentPage: string): Promise<ApiResponse<Location[]>> {
   const response = await fetch(`${BASE_URL}/location?page=${currentPage}`);
+
+  if (!response.ok) {
+    throw new Error('Failed to fetch data.');
+  }
+
+  return response.json();
+}
+
+export async function getAllEpisodes(currentPage: string): Promise<ApiResponse<Episode[]>> {
+  const response = await fetch(`${BASE_URL}/episode?page=${currentPage}`);
 
   if (!response.ok) {
     throw new Error('Failed to fetch data.');
