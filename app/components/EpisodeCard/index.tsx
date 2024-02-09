@@ -12,7 +12,7 @@ export default function EpisodeCard({
   return (
     <div className={styles['card-container']}>
       <Image
-        src={'/images/default-location-image.jpg'}
+        src={'/images/episode-default.jpg'}
         alt={episode.name}
         width={300}
         height={300}

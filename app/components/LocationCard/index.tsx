@@ -33,7 +33,7 @@ export default function LocationCard({
   return (
     <div className={styles['card-container']}>
       <Image
-        src={'/images/default-location-image.jpg'}
+        src={'/images/location-default.jpg'}
         alt={location.name}
         width={300}
         height={300}
