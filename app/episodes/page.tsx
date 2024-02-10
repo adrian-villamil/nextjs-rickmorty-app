@@ -1,5 +1,6 @@
 import { getAllEpisodes } from "../api/data";
 import EpisodeCard from "../components/EpisodeCard";
+import Pagination from "../components/Pagination";
 import { creepster } from "../fonts";
 import styles from './episodes.module.css';
 
@@ -24,6 +25,10 @@ export default async function Page({
           />
         ))}
       </div>
+      <Pagination
+        pages={info.pages}
+        currentPage={Number(currentPage) - 1}
+      />
     </main>
   );
 }
