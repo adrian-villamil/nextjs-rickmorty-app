@@ -32,11 +32,13 @@
   text-decoration: none;
   text-align: center;
   text-wrap: balance;
-  color: var(--primary-green);
-  font-size: 1.5em;
+  color: rgb(42, 42, 42);
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
 .card-link:hover {
+  color: var(--primary-green);
   text-decoration: underline;
   text-decoration-thickness: 3px;
 }
