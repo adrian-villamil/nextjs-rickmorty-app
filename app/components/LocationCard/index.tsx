@@ -1,29 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import { Location } from '@/app/types/api-types';
-import { creepster } from '@/app/fonts';
-import { IoPlanet } from "react-icons/io5";
-import { FaQuestionCircle, FaUmbrellaBeach } from 'react-icons/fa';
-import { GiGalaxy, GiNightSleep } from "react-icons/gi";
-import { LiaLightbulb, LiaSatelliteSolid } from "react-icons/lia";
-import { LuCircleDot } from 'react-icons/lu';
-import { PiCastleTurretFill, PiCirclesThreeFill, PiGearFineBold, PiTelevisionSimpleBold } from "react-icons/pi";
+import { FaLocationDot } from "react-icons/fa6";
 import styles from './locationcard.module.css';
-
-const type: Record<string, JSX.Element> = {
-  ['Cluster']: <GiGalaxy />,
-  ['Customs']: <PiGearFineBold />,
-  ['Dimension']: <PiCirclesThreeFill />,
-  ['Dream']: <GiNightSleep />,
-  ['Fantasy town']: <PiCastleTurretFill />,
-  ['Menagerie']: <LiaLightbulb />,
-  ['Microverse']: <LuCircleDot />,
-  ['Planet']: <IoPlanet />,
-  ['Resort']: <FaUmbrellaBeach />,
-  ['Space station']: <LiaSatelliteSolid />,
-  ['TV']: <PiTelevisionSimpleBold />,
-  ['unknown']: <FaQuestionCircle />,
-};
+import Link from 'next/link';
 
 export default function LocationCard({
   location,
@@ -32,30 +10,24 @@ export default function LocationCard({
 }) {
   return (
     <div className={styles['card-container']}>
-      <Image
-        src={'/images/location-default.jpg'}
-        alt={location.name}
-        width={300}
-        height={300}
-        priority
-        className={styles['card-image']}
-      />
-      <div className={styles['card-content']}>
+      <div className={styles['card-header']}>
+        <div className={styles['card-icon']}>
+          <FaLocationDot />
+        </div>
         <Link
-          href={`/characters/character-info/${location.id}`}
-          className={`${styles['card-link']} ${creepster.className}`}
+          href={`/locations/${location.id}`}
+          className={styles['card-title']}
         >
           {location.name}
         </Link>
-        <div className={styles['card-info']}>
-          <div>
-            <span>Type:</span>
-            <span className={`${styles.type} ${styles[location.type]}`}>
-              {type[location.type]}
-              {location.type}
-            </span>
-          </div>
-        </div>
+      </div>
+      <div className={styles['card-info']}>
+        <span>Type</span>
+        <span>{location.type}</span>
+      </div>
+      <div className={styles['card-info']}>
+        <span>Dimension</span>
+        <span>{location.dimension}</span>
       </div>
     </div>
   );
