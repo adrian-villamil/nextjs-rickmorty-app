@@ -21,22 +21,3 @@ export function CardItemSkeleton() {
     </div>
   );
 }
-
-export function CardListSkeleton() {
-  return (
-    <div className={styles['cardlist-container']}>
-      {Array.from(Array(20).keys()).map((element) => (
-        <CardItemSkeleton key={element} />
-      ))}
-    </div>
-  );
-}
-
-export function CharactersLoadingSkeleton() {
-  return (
-    <main className={styles.main}>
-      <h1 className={creepster.className}>Characters</h1>
-      <CardListSkeleton />
-    </main>
-  );
-}
