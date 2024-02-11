@@ -5,6 +5,7 @@ import styles from './header.module.css';
 import { usePathname } from 'next/navigation';
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { useState } from 'react';
+import { creepster } from '@/app/fonts';
 
 const navLinks = [
   { id: 1, pathname: '/', title: 'Home' },
@@ -31,9 +32,9 @@ export default function Header() {
     <header className={styles.header}>
       <Link
         href={'/'}
-        className={styles.link}
+        className={`${styles.logo} ${creepster.className}`}
       >
-        LOGO
+        Rick And Morty
       </Link>
       <nav
         className={isOpenMobileNav ? `${styles.navbar} ${styles.mobile}` : `${styles.navbar}`}

@@ -1,62 +1,94 @@
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 8px;
+  align-items: center;
+  min-height: 80px;
+  padding: 0 20px;
   box-shadow: 0 0 2px rgb(0, 0, 0);
 }
 
 .navbar {
   display: flex;
+  gap: 50px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: var(--neutral-background);
+}
+
+.logo, .link {
+  color: rgb(42, 42, 42);
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.logo {
+  font-size: 1.5em;
 }
 
 .link {
-  color: black;
-  text-decoration: none;
-  font-size: 17px;
+  font-size: 1.1em;
   font-weight: 500;
   padding: 14px 16px;
 }
 
+.link.active {
+  color: var(--neutral-background);
+  background-color: var(--primary-green);
+}
+
+.link:hover:not(.link.active), .button:hover {
+  color: var(--neutral-background);
+  background-color: rgb(42, 42, 42);
+}
+
 .button {
-  display: none;
-  font-size: 17px;
-  padding: 0 16px;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2em;
   border: none;
+  border-radius: 8px;
   background-color: transparent;
   cursor: pointer;
 }
 
-.link:hover:not(.link.active), .button:hover {
-  background-color: rgb(197, 197, 197);
-}
-
-.link.active {
-  background-color: var(--primary-green);
-}
-
-@media screen and (max-width: 600px) {
-  .header {
-    position: relative;
-  }
-
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
+@media screen and (width <= 1000px) {
   .navbar {
-    display: none;
-    position: absolute;  
-    left: 0;
-    top: 101%;
+    gap: 10px;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+  }
+}
+
+@media screen and (width <= 680px) {
+  .navbar {
+    visibility: hidden;
+    flex-direction: column;
+    gap: 0;
+    top: 100%;
+    right: 0;
     width: 100%;
-    background-color: white;
-    box-shadow: 0 0 2px rgb(0, 0, 0);
+    transform: translate(0,0);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   }
 
   .navbar.mobile {
-    display: flex;
-    flex-direction: column;
+    visibility: visible;
+  }
+
+  .navbar.mobile .link {
+    border-radius: 0;
+  }
+
+  .button {
+    visibility: visible;
   }
 }
