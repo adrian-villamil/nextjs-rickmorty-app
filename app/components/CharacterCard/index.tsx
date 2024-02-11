@@ -4,7 +4,7 @@ import { Character } from "@/app/types/api-types";
 import { FaHeart, FaSkull, FaQuestionCircle } from "react-icons/fa";
 import { IoMdFemale, IoMdMale } from "react-icons/io";
 import { FaGenderless } from "react-icons/fa6";
-import styles from './carditem.module.css';
+import styles from './charactercard.module.css';
 
 const status: Record<Character['status'], JSX.Element> = {
   Alive: <FaHeart />,
@@ -19,7 +19,7 @@ const gender: Record<Character['gender'], JSX.Element> = {
   unknown: <FaQuestionCircle />,
 };
 
-export default function CardItem({
+export default function CharacterCard({
   character,
 }: {
   character: Character

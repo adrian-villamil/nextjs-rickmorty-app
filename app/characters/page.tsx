@@ -3,7 +3,7 @@ import { getAllCharacters } from '../api/data';
 import { creepster } from '../fonts';
 import Pagination from '../components/Pagination';
 import styles from './characters.module.css';
-import CardItem from '../components/CardItem';
+import CharacterCard from '../components/CharacterCard';
 
 export const metadata: Metadata = {
   title: 'Characters',
@@ -24,7 +24,7 @@ export default async function Page({
       <h1 className={creepster.className}>Characters</h1>
       <div className={styles.list}>
         {results.map((character) => (
-          <CardItem
+          <CharacterCard
             key={character.id}
             character={character} />
         ))}
