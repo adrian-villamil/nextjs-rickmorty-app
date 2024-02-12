@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getAllCharacters } from '../api/data';
+import { getAllCharacters } from '../api/characters';
 import { creepster } from '../fonts';
 import Pagination from '../components/Pagination';
 import styles from './characters.module.css';

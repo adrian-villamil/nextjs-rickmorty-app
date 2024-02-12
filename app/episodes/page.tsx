@@ -1,4 +1,4 @@
-import { getAllEpisodes } from "../api/data";
+import { getAllEpisodes } from "../api/episodes";
 import EpisodeCard from "../components/EpisodeCard";
 import Pagination from "../components/Pagination";
 import { creepster } from "../fonts";

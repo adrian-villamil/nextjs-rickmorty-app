@@ -1,4 +1,4 @@
-import { getAllLocations } from "../api/data";
+import { getAllLocations } from "../api/locations";
 import { creepster } from "../fonts";
 import LocationCard from "../components/LocationCard";
 import Pagination from "../components/Pagination";
