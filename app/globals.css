@@ -24,14 +24,14 @@ main {
   flex: 1;
 }
 
-main>h1 {
+.page-title {
   text-align: center;
   font-size: 4em;
   color: var(--primary-green);
 }
 
-@media screen and (max-width: 350px) {
-  main>h1 {
+@media screen and (width <=350px) {
+  .page-title {
     font-size: 3em;
   }
 }
