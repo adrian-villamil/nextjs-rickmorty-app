@@ -15,7 +15,7 @@ export default function EpisodeCard({
           <PiTelevisionSimpleBold />
         </div>
         <Link
-          href={`/locations/${episode.id}`}
+          href={`/episodes/${episode.id}`}
           className={styles['card-title']}
         >
           {episode.name}
