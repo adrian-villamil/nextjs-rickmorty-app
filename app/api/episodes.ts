@@ -1,7 +1,8 @@
 import { ApiResponse, Episode } from "../types/api-types";
+import { RICK_AND_MORTY_API_URL } from "@/config";
 
 export async function getAllEpisodes(currentPage: string): Promise<ApiResponse<Episode[]>> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_RICK_AND_MORTY_API_URL}/episode?page=${currentPage}`);
+  const response = await fetch(`${RICK_AND_MORTY_API_URL}/episode?page=${currentPage}`);
 
   if (!response.ok) {
     throw new Error('Failed to fetch data.');
@@ -11,7 +12,7 @@ export async function getAllEpisodes(currentPage: string): Promise<ApiResponse<E
 }
 
 export async function getEpisodeById(episodeId: string): Promise<Episode> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_RICK_AND_MORTY_API_URL}/episode/${episodeId}`);
+  const response = await fetch(`${RICK_AND_MORTY_API_URL}/episode/${episodeId}`);
 
   if (!response.ok) {
     throw new Error('Failed to fetch data.');
