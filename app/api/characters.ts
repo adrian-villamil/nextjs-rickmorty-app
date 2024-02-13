@@ -20,3 +20,17 @@ export async function getCharacterById(characterId: string): Promise<Character> 
 
   return response.json();
 }
+
+export async function getCharactersFromUrls(charactersUrls: string[]): Promise<Character[]> {
+  const characters = charactersUrls.map(async (url) => {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch data.');
+    }
+
+    return response.json();
+  });
+
+  return Promise.all(characters);
+}

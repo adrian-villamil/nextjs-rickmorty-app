@@ -1,0 +1,111 @@
+.main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container hr {
+  width: 100%;
+}
+
+.location-name {
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.location-info {
+  display: grid;
+  grid-template-columns: 100px auto;
+  row-gap: 5px;
+}
+
+.location-info>span {
+  color: rgb(82, 82, 82);
+}
+
+.residents-title {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.residents-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.resident-card {
+  display: flex;
+  gap: 10px;
+}
+
+.resident-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.resident-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.resident-name {
+  text-decoration: none;
+  font-size: 1.05em;
+  color: rgb(19, 171, 231);
+}
+
+.resident-name:hover {
+  text-decoration: underline;
+}
+
+.resident-status {
+  font-size: 0.9em;
+  color: rgb(82, 82, 82);
+}
+
+@media screen and (width <=750px) {
+  .residents-list {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (width <=600px) {
+  .location-name {
+    font-size: 2.5em;
+  }
+
+  .residents-title {
+    font-size: 1.67em;
+  }
+
+  .residents-list {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (width <=400px) {
+  .location-name {
+    font-size: 2em;
+  }
+
+  .location-info>span {
+    font-size: 0.9em;
+  }
+
+  .residents-title {
+    font-size: 1.34em;
+  }
+}
