@@ -2,7 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { getCharacterById } from "@/app/api/characters";
 import { getEpisodesFromUrls } from "@/app/api/episodes";
-import { IoPlayOutline } from "react-icons/io5";
+import { creepster } from "@/app/fonts";
+import { FaGlobe } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { FaTag } from "react-icons/fa";
+import { GiPlantsAndAnimals } from "react-icons/gi";
+import { MdMonitorHeart } from "react-icons/md";
+import { PiGenderIntersexBold } from "react-icons/pi";
+import { PiTelevisionSimpleBold } from "react-icons/pi";
 import styles from './character.module.css';
 
 export default async function Page({
@@ -27,34 +35,55 @@ export default async function Page({
             className={styles.image}
           />
           <div className={styles['info']}>
-            <h1>{character.name}</h1>
+            <h1 className={creepster.className}>{character.name}</h1>
             <div className={styles['info-container']}>
-              <div>
-                <span>Status</span>
+              <div className={styles['info-row']}>
+                <span className={styles['info-attribute']}>
+                  {<MdMonitorHeart />}
+                  Status
+                </span>
                 <span>{character.status}</span>
               </div>
-              <div>
-                <span>Species</span>
+              <div className={styles['info-row']}>
+                <span className={styles['info-attribute']}>
+                  {<GiPlantsAndAnimals />}
+                  Species
+                </span>
                 <span>{character.species}</span>
               </div>
-              <div>
-                <span>Type</span>
-                <span>{character.type}</span>
+              <div className={styles['info-row']}>
+                <span className={styles['info-attribute']}>
+                  {<FaTag />}
+                  Type
+                </span>
+                <span>{character.type || '---'}</span>
               </div>
-              <div>
-                <span>Gender</span>
+              <div className={styles['info-row']}>
+                <span className={styles['info-attribute']}>
+                  {<PiGenderIntersexBold />}
+                  Gender
+                </span>
                 <span>{character.gender}</span>
               </div>
-              <div>
-                <span>Origin</span>
+              <div className={styles['info-row']}>
+                <span className={styles['info-attribute']}>
+                  {<FaGlobe />}
+                  Origin
+                </span>
                 <span>{character.origin.name}</span>
               </div>
-              <div>
-                <span>Location</span>
+              <div className={styles['info-row']}>
+                <span className={styles['info-attribute']}>
+                  {<FaMapMarkerAlt />}
+                  Location
+                </span>
                 <span>{character.location.name}</span>
               </div>
-              <div>
-                <span>Created</span>
+              <div className={styles['info-row']}>
+                <span className={styles['info-attribute']}>
+                  {<FaRegCalendarAlt />}
+                  Created
+                </span>
                 <span>{new Date(character.created).toLocaleString()}</span>
               </div>
             </div>
@@ -67,7 +96,7 @@ export default async function Page({
             {episodes.map((episode) => (
               <div key={episode.id} className={styles['episode-item']}>
                 <div className={styles['episode-icon']}>
-                  <IoPlayOutline />
+                  <PiTelevisionSimpleBold />
                 </div>
                 <div>
                   <Link
