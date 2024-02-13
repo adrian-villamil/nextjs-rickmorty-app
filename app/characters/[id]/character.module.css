@@ -26,7 +26,7 @@
   border-radius: 8px;
 }
 
-.info>h1 {
+.info-title {
   margin-top: 0;
   font-size: 2.5em;
   color: var(--primary-green);
@@ -55,7 +55,7 @@
   font-size: 1.2em;
 }
 
-.row-2>h3 {
+.episodes-title {
   margin-top: 0;
   font-size: 1.5em;
 }
@@ -99,7 +99,7 @@
     margin: auto;
   }
 
-  .info>h1 {
+  .info-title {
     text-align: center;
   }
 
@@ -118,7 +118,7 @@
     height: auto;
   }
 
-  .info>h1 {
+  .info-title {
     font-size: 1.6em;
   }
 
@@ -130,7 +130,7 @@
     font-size: 0.9em;
   }
 
-  .row-2>h3 {
+  .episodes-title {
     font-size: 1.2em;
   }
 

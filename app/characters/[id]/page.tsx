@@ -35,7 +35,7 @@ export default async function Page({
             className={styles.image}
           />
           <div className={styles['info']}>
-            <h1 className={creepster.className}>{character.name}</h1>
+            <h1 className={`${styles['info-title']} ${creepster.className}`}>{character.name}</h1>
             <div className={styles['info-container']}>
               <div className={styles['info-row']}>
                 <span className={styles['info-attribute']}>
@@ -91,7 +91,7 @@ export default async function Page({
         </div>
         <hr />
         <div className={styles['row-2']}>
-          <h3>Episodes</h3>
+          <h3 className={styles['episodes-title']}>Episodes</h3>
           <div className={styles['episodes-list']}>
             {episodes.map((episode) => (
               <div key={episode.id} className={styles['episode-item']}>
