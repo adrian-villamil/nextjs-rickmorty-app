@@ -1,0 +1,145 @@
+.main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container hr {
+  width: 100%;
+}
+
+.location-name {
+  width: 400px;
+  height: 59px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: rgb(197, 197, 197);
+}
+
+.location-info {
+  display: grid;
+  grid-template-columns: 100px auto;
+  row-gap: 5px;
+}
+
+.location-info>span {
+  color: rgb(82, 82, 82);
+}
+
+.location-info>div {
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: rgb(197, 197, 197);
+}
+
+.residents-title {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.residents-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.resident-card {
+  display: flex;
+  gap: 10px;
+}
+
+.resident-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(197, 197, 197);
+}
+
+.resident-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.resident-name {
+  width: 160px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: rgb(197, 197, 197);
+}
+
+.resident-status {
+  display: flex;
+  gap: 5px;
+  font-size: 0.9em;
+  color: rgb(82, 82, 82);
+}
+
+.resident-status>div {
+  width: 70px;
+  height: 17px;
+  border-radius: 3px;
+  background-color: rgb(197, 197, 197);
+}
+
+@media screen and (width <=750px) {
+  .residents-list {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (width <=600px) {
+  .location-name {
+    width: 380px;
+    height: 49px;
+  }
+
+  .residents-title {
+    font-size: 1.67em;
+  }
+
+  .residents-list {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (width <=460px) {
+  .location-name {
+    width: 100%;
+  }
+}
+
+@media screen and (width <=400px) {
+  .location-name {
+    height: 39px;
+  }
+
+  .location-info>span {
+    font-size: 0.9em;
+  }
+
+  .location-info>div {
+    width: 80%;
+    height: 17px;
+  }
+
+  .residents-title {
+    font-size: 1.34em;
+  }
+}
+
+@media screen and (width <= 290px) {
+  .resident-name {
+    width: 100%;
+  }
+}
