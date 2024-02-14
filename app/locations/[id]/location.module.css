@@ -76,6 +76,13 @@
   color: rgb(82, 82, 82);
 }
 
+.no-residents {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgb(82, 82, 82);
+}
+
 @media screen and (width <=750px) {
   .residents-list {
     grid-template-columns: auto auto;
@@ -107,5 +114,9 @@
 
   .residents-title {
     font-size: 1.34em;
+  }
+
+  .no-residents {
+    font-size: 0.9em;
   }
 }
