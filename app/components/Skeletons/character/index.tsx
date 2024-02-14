@@ -12,10 +12,10 @@ export function CharacterSkeleton() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <div className={styles['row-1']}>
-          <div className={styles.image}></div>
-          <div className={styles['info']}>
-            <div className={styles['info-title']}></div>
+        <div className={styles['character-container']}>
+          <div className={styles['character-image']}></div>
+          <div>
+            <div className={styles['character-name']}></div>
             <div className={styles['info-container']}>
               <div className={styles['info-row']}>
                 <span className={styles['info-attribute']}>

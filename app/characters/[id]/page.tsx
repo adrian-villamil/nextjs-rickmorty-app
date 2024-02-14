@@ -25,17 +25,17 @@ export default async function Page({
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <div className={styles['row-1']}>
+        <div className={styles['character-container']}>
           <Image
             src={character.image}
             alt={character.name}
             width={300}
             height={300}
             priority
-            className={styles.image}
+            className={styles['character-image']}
           />
-          <div className={styles['info']}>
-            <h1 className={`${styles['info-title']} ${creepster.className}`}>{character.name}</h1>
+          <div>
+            <h1 className={styles['character-name']}>{character.name}</h1>
             <div className={styles['info-container']}>
               <div className={styles['info-row']}>
                 <span className={styles['info-attribute']}>
@@ -90,7 +90,7 @@ export default async function Page({
           </div>
         </div>
         <hr />
-        <div className={styles['row-2']}>
+        <div className={styles['episodes-container']}>
           <h3 className={styles['episodes-title']}>Episodes</h3>
           <div className={styles['episodes-list']}>
             {episodes.map((episode) => (

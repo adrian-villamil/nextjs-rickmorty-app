@@ -3,33 +3,31 @@
 }
 
 .container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: auto;
-  padding: 40px;
-  max-width: 900px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.247);
 }
 
 .container hr {
   width: 100%;
 }
 
-.row-1 {
+.character-container {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
-.image {
+.character-image {
   aspect-ratio: 1/1;
   width: 300px;
   border-radius: 8px;
   background-color: rgb(197, 197, 197);
 }
 
-.info-title {
+.character-name {
   width: 280px;
   height: 47px;
   margin-bottom: 26.8px;
@@ -40,7 +38,7 @@
 .info-container {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
 }
 
 .info-row {
@@ -52,8 +50,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-weight: 700;
-  color: rgb(95, 95, 95);
+  color: rgb(82, 82, 82);
 }
 
 .info-attribute svg {
@@ -69,7 +66,7 @@
 
 .episodes-title {
   margin-top: 0;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .episode-item {
@@ -84,7 +81,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
-  color: rgb(19, 171, 231);
+  color: rgb(82, 82, 82);
 }
 
 .episode-link {
@@ -94,38 +91,38 @@
   background-color: rgb(197, 197, 197);
 }
 
-.episode-link:hover {
-  color: rgb(19, 171, 231);
-  text-decoration: underline;
-}
-
 @media screen and (width <=700px) {
-  .row-1 {
+  .character-container {
     flex-direction: column;
   }
 
-  .image {
+  .character-image {
     margin: auto;
   }
 
-  .info-title {
+  .character-name {
+    height: 45px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .info-container {
-    justify-content: center;
+  .episodes-title {
+    font-size: 1.67em;
   }
 }
 
 @media screen and (width <=400px) {
-  .image {
+  .character-image {
     width: 100%;
   }
 
-  .info-title {
+  .character-name {
     width: 80%;
-    height: 30px;
+    height: 31px;
+  }
+
+  .info-container {
+    gap: 16px;
   }
 
   .info-row {
