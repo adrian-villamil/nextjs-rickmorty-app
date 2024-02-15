@@ -23,15 +23,3 @@ body {
 main {
   flex: 1;
 }
-
-.page-title {
-  text-align: center;
-  font-size: 4em;
-  color: var(--primary-green);
-}
-
-@media screen and (width <=350px) {
-  .page-title {
-    font-size: 3em;
-  }
-}
