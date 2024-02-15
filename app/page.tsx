@@ -66,7 +66,7 @@ export default function Home() {
       <div className={styles['title-container']}>
         <div>
           <h1 className={`${styles['home-title']} ${creepster.className}`}>Rick And Morty</h1>
-          <p className={styles['home-subtitle']}>The official guie de to multiverse's craziest adventures</p>
+          <p className={styles['home-subtitle']}>{`The official guie de to multiverse's craziest adventures`}</p>
         </div>
       </div>
       <div className={styles['intro-list']}>
