@@ -6,7 +6,7 @@
 .title-container {
   display: flex;
   justify-content: center;
-  margin: 60px;
+  margin: 60px 40px;
 }
 
 .home-title {
@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   gap: 160px;
-  margin: 100px 0;
+  margin: 100px 40px;
 }
 
 .intro-container {
@@ -65,5 +65,99 @@
 .intro-image {
   width: 550px;
   height: auto;
-  border-radius: 14px;
+  border-radius: 1em;
+}
+
+@media screen and (width<=1200px) {
+  .intro-container {
+    gap: 38px;
+  }
+
+  .intro-info,
+  .intro-image {
+    width: 50%;
+  }
+
+  .intro-title {
+    font-size: 2em;
+  }
+
+  .intro-text {
+    font-size: 1em;
+  }
+
+  .intro-link {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (width<=900px) {
+  .title-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .home-title {
+    font-size: 4em;
+  }
+
+  .home-subtitle {
+    font-size: 1em;
+  }
+
+  .intro-list {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    gap: 120px;
+  }
+
+  .intro-container {
+    gap: 28px;
+  }
+
+  .intro-title {
+    font-size: 1.5em;
+  }
+
+  .intro-text {
+    font-size: 0.9em;
+  }
+
+  .intro-link {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (width<=800px) {
+  .intro-list {
+    gap: 80px;
+  }
+  
+  .intro-container {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .intro-info,
+  .intro-image {
+    width: 100%;
+  }
+}
+
+@media screen and (width<=500px) {
+  .home-title {
+    font-size: 3em;
+  }
+
+  .home-subtitle {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (width<=400px) {
+  .title-container,
+  .intro-list {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

@@ -75,7 +75,10 @@ export default function Home() {
             <div className={styles['intro-info']}>
               <h1 className={styles['intro-title']}>{intro.title}</h1>
               <p className={styles['intro-text']}>{intro.text}</p>
-              <Link href={intro.pathname} className={styles['intro-link']}>
+              <Link
+                href={intro.pathname}
+                className={styles['intro-link']}
+              >
                 {'View '}
                 {intro.section}
               </Link>
