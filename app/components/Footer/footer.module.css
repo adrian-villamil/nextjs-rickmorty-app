@@ -1,4 +1,23 @@
 .footer {
-  min-height: 50px;
+  min-height: 80px;
   box-shadow: 0 0 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 40px 20px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(19, 171, 231);
+}
+
+.link:hover {
+  text-decoration: underline;
 }
