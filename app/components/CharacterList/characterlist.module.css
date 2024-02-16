@@ -1,0 +1,50 @@
+.characters-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.character-card {
+  display: flex;
+  gap: 10px;
+}
+
+.character-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.character-name {
+  text-decoration: none;
+  font-size: 1.05em;
+  color: rgb(19, 171, 231);
+}
+
+.character-name:hover {
+  text-decoration: underline;
+}
+
+.character-status {
+  font-size: 0.9em;
+  color: rgb(82, 82, 82);
+}
+
+@media screen and (width <=750px) {
+  .characters-list {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (width <=600px) {
+  .characters-list {
+    grid-template-columns: auto;
+  }
+}

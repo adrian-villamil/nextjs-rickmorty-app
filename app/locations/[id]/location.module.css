@@ -37,56 +37,11 @@
   font-size: 2em;
 }
 
-.residents-list {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-between;
-  row-gap: 20px;
-}
-
-.resident-card {
-  display: flex;
-  gap: 10px;
-}
-
-.resident-image {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.resident-info {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.resident-name {
-  text-decoration: none;
-  font-size: 1.05em;
-  color: rgb(19, 171, 231);
-}
-
-.resident-name:hover {
-  text-decoration: underline;
-}
-
-.resident-status {
-  font-size: 0.9em;
-  color: rgb(82, 82, 82);
-}
-
 .no-residents {
   display: flex;
   align-items: center;
   gap: 5px;
   color: rgb(82, 82, 82);
-}
-
-@media screen and (width <=750px) {
-  .residents-list {
-    grid-template-columns: auto auto;
-  }
 }
 
 @media screen and (width <=600px) {
@@ -96,10 +51,6 @@
 
   .residents-title {
     font-size: 1.67em;
-  }
-
-  .residents-list {
-    grid-template-columns: auto;
   }
 }
 
