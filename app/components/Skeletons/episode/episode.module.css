@@ -1,0 +1,83 @@
+.main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container hr {
+  width: 100%;
+}
+
+.episode-name {
+  width: 400px;
+  height: 59px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: rgb(197, 197, 197);
+}
+
+.episode-info {
+  display: grid;
+  grid-template-columns: 100px auto;
+  row-gap: 5px;
+}
+
+.episode-info>span {
+  color: rgb(82, 82, 82);
+}
+
+.episode-info>div {
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: rgb(197, 197, 197);
+}
+
+.characters-title {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+@media screen and (width <=600px) {
+  .episode-name {
+    width: 380px;
+    height: 49px;
+  }
+
+  .characters-title {
+    font-size: 1.67em;
+  }
+}
+
+@media screen and (width <=460px) {
+  .episode-name {
+    width: 100%;
+  }
+}
+
+@media screen and (width <=400px) {
+  .episode-name {
+    height: 39px;
+  }
+
+  .episode-info>span {
+    font-size: 0.9em;
+  }
+
+  .episode-info>div {
+    width: 80%;
+    height: 17px;
+  }
+
+  .characters-title {
+    font-size: 1.34em;
+  }
+}
