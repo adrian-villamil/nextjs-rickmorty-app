@@ -7,9 +7,9 @@ export function EpisodeSkeleton() {
         <div className={styles['episode-container']}>
           <div className={styles['episode-name']}></div>
           <div className={styles['episode-info']}>
-            <span>Tipe:</span>
+            <span>Episode:</span>
             <div></div>
-            <span>Dimension:</span>
+            <span>Air date:</span>
             <div></div>
             <span>Created:</span>
             <div></div>
@@ -17,7 +17,7 @@ export function EpisodeSkeleton() {
         </div>
         <hr />
         <div className={styles['characters-container']}>
-          <h2 className={styles['characters-title']}>Residents</h2>
+          <h2 className={styles['characters-title']}>Characters</h2>
         </div>
       </div>
     </main >
