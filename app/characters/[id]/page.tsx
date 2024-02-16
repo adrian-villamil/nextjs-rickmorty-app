@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { getCharacterById } from "@/app/api/characters";
 import { getEpisodesFromUrls } from "@/app/api/episodes";
-import { creepster } from "@/app/fonts";
 import { FaGlobe } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaRegCalendarAlt } from "react-icons/fa";
@@ -70,14 +69,30 @@ export default async function Page({
                   {<FaGlobe />}
                   Origin
                 </span>
-                <span>{character.origin.name}</span>
+                {character.origin.name === 'unknown' ?
+                  <span>{character.origin.name}</span> :
+                  <Link
+                    href={`/locations/${character.origin.url.slice(41)}`}
+                    className={styles['info-link']}
+                  >
+                    {character.origin.name}
+                  </Link>
+                }
               </div>
               <div className={styles['info-row']}>
                 <span className={styles['info-attribute']}>
                   {<FaMapMarkerAlt />}
                   Location
                 </span>
-                <span>{character.location.name}</span>
+                {character.location.name === 'unknown' ?
+                  <span>{character.location.name}</span> :
+                  <Link
+                    href={`/locations/${character.location.url.slice(41)}`}
+                    className={styles['info-link']}
+                  >
+                    {character.location.name}
+                  </Link>
+                }
               </div>
               <div className={styles['info-row']}>
                 <span className={styles['info-attribute']}>

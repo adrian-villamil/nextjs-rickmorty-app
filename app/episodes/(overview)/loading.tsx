@@ -1,5 +1,5 @@
-import { CardSkeleton } from '../components/Skeletons/locations-episodes';
-import { creepster } from '../fonts';
+import { CardSkeleton } from '../../components/Skeletons/locations-episodes';
+import { creepster } from '../../fonts';
 import styles from './episodes.module.css';
 
 export default function Loading() {

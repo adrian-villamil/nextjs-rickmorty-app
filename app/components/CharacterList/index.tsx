@@ -6,7 +6,7 @@ import styles from './characterlist.module.css';
 export default async function CharacterList({
   charactersUrls,
 }: {
-  charactersUrls: string[],
+  charactersUrls: string[];
 }) {
   const characters = await getCharactersFromUrls(charactersUrls);
 

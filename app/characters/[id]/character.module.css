@@ -54,6 +54,15 @@
   font-size: 1.2em;
 }
 
+.info-link {
+  text-decoration: none;
+  color: rgb(19, 171, 231);
+}
+
+.info-link:hover {
+  text-decoration: underline;
+}
+
 .episodes-title {
   margin-top: 0;
   font-size: 2em;

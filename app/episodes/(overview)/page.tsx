@@ -1,7 +1,7 @@
-import { getAllEpisodes } from "../api/episodes";
-import EpisodeCard from "../components/EpisodeCard";
-import Pagination from "../components/Pagination";
-import { creepster } from "../fonts";
+import { getAllEpisodes } from "../../api/episodes";
+import EpisodeCard from "../../components/EpisodeCard";
+import Pagination from "../../components/Pagination";
+import { creepster } from "../../fonts";
 import styles from './episodes.module.css';
 
 export default async function Page({

@@ -1,5 +1,5 @@
-import { CardItemSkeleton } from '../components/Skeletons/characters';
-import { creepster } from '../fonts';
+import { CardItemSkeleton } from '../../components/Skeletons/characters';
+import { creepster } from '../../fonts';
 import styles from './characters.module.css';
 
 export default function Loading() {

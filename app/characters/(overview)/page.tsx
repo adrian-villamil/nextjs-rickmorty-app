@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import { getAllCharacters } from '../api/characters';
-import { creepster } from '../fonts';
-import Pagination from '../components/Pagination';
+import { getAllCharacters } from '../../api/characters';
+import { creepster } from '../../fonts';
+import Pagination from '../../components/Pagination';
 import styles from './characters.module.css';
-import CharacterCard from '../components/CharacterCard';
+import CharacterCard from '../../components/CharacterCard';
 
 export const metadata: Metadata = {
   title: 'Characters',
