@@ -18,7 +18,7 @@
 .home-subtitle {
   margin: 0;
   font-size: 1.3em;
-  color: rgb(107, 114, 128);
+  color: var(--storm-grey);
 }
 
 .intro-list {
@@ -42,12 +42,13 @@
   margin-top: 0;
   margin-bottom: 14px;
   font-size: 3em;
+  color: var(--universe-black);
 }
 
 .intro-text {
   margin: 0;
   font-size: 1.3em;
-  color: rgb(107, 114, 128);
+  color: var(--storm-grey);
   text-wrap: balance;
 }
 
@@ -59,7 +60,7 @@
   text-decoration: none;
   font-weight: 600;
   color: var(--neutral-background);
-  background-color: rgb(19, 171, 231);
+  background-color: var(--ocean-blue);
 }
 
 .intro-image {

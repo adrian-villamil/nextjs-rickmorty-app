@@ -30,7 +30,7 @@ export default async function Page({
         ))}
       </div>
       <Pagination
-        pages={info.pages}
+        pages={info.pages ?? 1}
         currentPage={Number(currentPage) - 1}
       />
     </main>

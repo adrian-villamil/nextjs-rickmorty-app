@@ -18,7 +18,7 @@
 .react-paginate a {
   display: block;
   padding: 8px 16px;
-  color: black;
+  color: var(--universe-black);
   border: 1px solid #dddddd;
   cursor: pointer;
   border-radius: 6px;

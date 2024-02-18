@@ -11,11 +11,12 @@
 
 .footer p {
   margin: 0;
+  color: var(--universe-black);
 }
 
 .link {
   text-decoration: none;
-  color: rgb(19, 171, 231);
+  color: var(--ocean-blue);
 }
 
 .link:hover {

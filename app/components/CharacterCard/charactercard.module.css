@@ -32,7 +32,7 @@
   text-decoration: none;
   text-align: center;
   text-wrap: balance;
-  color: rgb(42, 42, 42);
+  color: var(--universe-black);
   font-size: 1.3em;
   font-weight: 600;
 }
@@ -57,7 +57,7 @@
 
 .card-info div > span:first-child {
   font-weight: 600;
-  color: rgb(110, 110, 110);
+  color: var(--storm-grey);
 }
 
 .gender, .status {
@@ -67,25 +67,25 @@
 }
 
 .Female svg {
-  color: rgb(255,105,180);
+  color: var(--lollipop-pink);
 }
 
 .Male svg {
-  color: rgb(0,191,255);
+  color: var(--ocean-blue);
 }
 
 .Genderless svg {
-  color: rgb(131, 131, 131);
+  color: var(--storm-grey);
 }
 
 .Alive svg {
-  color: rgb(75, 150, 9);
+  color: var(--primary-green);
 }
 
 .Dead svg {
-  color: rgb(223, 28, 34);
+  color: var(--accent-red);
 }
 
 .unknown svg {
-  color: rgb(51, 51, 51);
+  color: var(--universe-black);
 }

@@ -35,7 +35,7 @@
 .card-title {
   text-decoration: none;
   text-wrap: balance;
-  color: rgb(41, 41, 41);
+  color: var(--universe-black);
   font-size: 1.3em;
   font-weight: 600;
 }
@@ -53,6 +53,10 @@
 }
 
 .card-info>span:first-of-type {
-  color: rgb(110, 110, 110);
+  color: var(--storm-grey);
   font-weight: 600;
+}
+
+.card-info>span:last-of-type {
+  color: var(--universe-black);
 }

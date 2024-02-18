@@ -20,6 +20,7 @@
   font-size: 3em;
   margin-top: 0;
   margin-bottom: 15px;
+  color: var(--universe-black);
 }
 
 .location-info {
@@ -29,19 +30,20 @@
 }
 
 .location-info>span {
-  color: rgb(82, 82, 82);
+  color: var(--storm-grey);
 }
 
 .residents-title {
   margin-top: 0;
   font-size: 2em;
+  color: var(--universe-black);
 }
 
 .no-residents {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: rgb(82, 82, 82);
+  color: var(--storm-grey);
 }
 
 @media screen and (width <=600px) {

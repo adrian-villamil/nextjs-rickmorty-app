@@ -25,7 +25,7 @@
 .character-name {
   text-decoration: none;
   font-size: 1.05em;
-  color: rgb(19, 171, 231);
+  color: var(--ocean-blue);
 }
 
 .character-name:hover {
@@ -34,7 +34,7 @@
 
 .character-status {
   font-size: 0.9em;
-  color: rgb(82, 82, 82);
+  color: var(--storm-grey);
 }
 
 @media screen and (width <=750px) {

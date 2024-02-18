@@ -19,7 +19,7 @@
 }
 
 .logo, .link {
-  color: rgb(42, 42, 42);
+  color: var(--universe-black);
   text-decoration: none;
   border-radius: 8px;
 }
@@ -41,7 +41,7 @@
 
 .link:hover:not(.link.active), .button:hover {
   color: var(--neutral-background);
-  background-color: rgb(42, 42, 42);
+  background-color: var(--universe-black);
 }
 
 .button {

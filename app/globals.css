@@ -1,10 +1,14 @@
 :root {
-  --primary-green: #00cc00; /* Rick and Morty Green */
-  --portal-blue: #0033cc; /* Portal Blue */
-  --galactic-purple: #9900cc; /* Galactic Purple */
-  --morty-yellow: #ffd700; /* Morty Yellow */
-  --neutral-background: #f8f8f8; /* Neutral Background */
-  --accent-red: #ff0000; /* Accent Red */
+  --primary-green: #00cc00; 
+  --portal-blue: #0033cc; 
+  --galactic-purple: #9900cc; 
+  --morty-yellow: #ffd700; 
+  --neutral-background: #f8f8f8;
+  --accent-red: #ff0000;
+  --ocean-blue: #13abe7;
+  --storm-grey: #6b7280;
+  --universe-black: #333333;
+  --lollipop-pink: #ff69b4;
 }
 
 * {
