@@ -14,14 +14,19 @@ export default async function CharacterList({
     <div className={styles['characters-list']}>
       {characters.map((character) => (
         <div key={character.id} className={styles['character-card']}>
-          <Image
-            src={character.image}
-            alt={character.name}
-            width={300}
-            height={300}
-            priority
-            className={styles['character-image']}
-          />
+          <Link
+            href={`/characters/${character.id}`}
+            className={styles['character-link']}
+          >
+            <Image
+              src={character.image}
+              alt={character.name}
+              width={300}
+              height={300}
+              priority
+              className={styles['character-image']}
+            />
+          </Link>
           <div className={styles['character-info']}>
             <Link
               href={`/characters/${character.id}`}

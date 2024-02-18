@@ -10,10 +10,16 @@
   gap: 10px;
 }
 
-.character-image {
+.character-link {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
 }
 
 .character-info {
