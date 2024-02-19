@@ -5,17 +5,17 @@ export async function getAllLocations(currentPage: string): Promise<ApiResponse<
   const response = await fetch(`${RICK_AND_MORTY_API_URL}/location?page=${currentPage}`);
 
   if (!response.ok) {
-    throw new Error('Failed to fetch data.');
+    throw new Error('Failed to fetch all locations.');
   }
 
   return response.json();
 }
 
 export async function getLocationById(locationId: string): Promise<Location> {
-  const response = await fetch(`${RICK_AND_MORTY_API_URL}/location/${locationId}`);
+  const response = await fetch(`${RICK_AND_MORTY_API_URL}/location/${locationId}.`);
 
   if (!response.ok) {
-    throw new Error('Failed to fetch data.');
+    throw new Error(`Failed to fetch the location with id ${locationId}`);
   }
 
   return response.json();

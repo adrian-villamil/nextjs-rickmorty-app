@@ -5,7 +5,7 @@ export async function getAllEpisodes(currentPage: string): Promise<ApiResponse<E
   const response = await fetch(`${RICK_AND_MORTY_API_URL}/episode?page=${currentPage}`);
 
   if (!response.ok) {
-    throw new Error('Failed to fetch data.');
+    throw new Error('Failed to fetch all episodes.');
   }
 
   return response.json();
@@ -15,7 +15,7 @@ export async function getEpisodeById(episodeId: string): Promise<Episode> {
   const response = await fetch(`${RICK_AND_MORTY_API_URL}/episode/${episodeId}`);
 
   if (!response.ok) {
-    throw new Error('Failed to fetch data.');
+    throw new Error(`Failed to fetch the episode with id ${episodeId}.`);
   }
 
   return response.json();
@@ -26,7 +26,7 @@ export async function getEpisodesFromUrls(episodesUrls: string[]): Promise<Episo
     const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error('Failed to fetch data.');
+      throw new Error('Failed to list of episodes.');
     }
     
     return response.json();
