@@ -6,7 +6,8 @@ import styles from './characters.module.css';
 import CharacterCard from '../../components/CharacterCard';
 
 export const metadata: Metadata = {
-  title: 'Characters',
+  title: 'Characters Page',
+  description: 'Page where you can see all characters from the rick and morty universe',
 };
 
 export default async function Page({

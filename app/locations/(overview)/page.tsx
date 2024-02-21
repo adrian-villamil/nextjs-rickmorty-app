@@ -1,8 +1,15 @@
+import { Metadata } from "next";
 import { getAllLocations } from "../../api/locations";
 import { creepster } from "../../fonts";
 import LocationCard from "../../components/LocationCard";
 import Pagination from "../../components/Pagination";
 import styles from './locations.module.css';
+
+
+export const metadata: Metadata = {
+  title: 'Locations Page',
+  description: 'Page where you can see all rick and morty locations',
+};
 
 export default async function Page({
   searchParams,
