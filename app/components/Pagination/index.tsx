@@ -6,6 +6,7 @@ import ReactPaginate from "react-paginate";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { HiDotsHorizontal } from "react-icons/hi";
 import styles from './pagination.module.css';
+import { useMediaQuery } from "react-responsive";
 
 export default function Pagination({
   pages,
@@ -18,22 +19,17 @@ export default function Pagination({
   const { replace } = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const isMax850 = useMediaQuery({ query: '(min-width: 850px)' });
+  const isMin849 = useMediaQuery({ query: '(max-width: 849px)' });
+  const isMin750 = useMediaQuery({ query: '(min-width: 750px)' });
+  const isMin650 = useMediaQuery({ query: '(min-width: 650px)' });
+  const isMin520 = useMediaQuery({ query: '(min-width: 520px)' });
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 850) setPageRangeDisplayed(10);
-      if (window.innerWidth < 850) setPageRangeDisplayed(9);
-      if (window.innerWidth < 750) setPageRangeDisplayed(7);
-      if (window.innerWidth < 650) setPageRangeDisplayed(5);
-      if (window.innerWidth < 520) setPageRangeDisplayed(3);
-    };
-    
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  });
+  if (isMax850) setPageRangeDisplayed(10);
+  if (isMin849) setPageRangeDisplayed(9);
+  if (isMin750) setPageRangeDisplayed(7);
+  if (isMin650) setPageRangeDisplayed(5);
+  if (isMin520) setPageRangeDisplayed(3);
 
   const handlePageChange = (data: { selected: number }) => {
     const params = new URLSearchParams(searchParams);
