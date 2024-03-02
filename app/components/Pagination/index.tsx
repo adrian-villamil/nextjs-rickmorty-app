@@ -20,6 +20,14 @@ export default function Pagination({
   const searchParams = useSearchParams();
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 850) setPageRangeDisplayed(10);
+      if (window.innerWidth < 850) setPageRangeDisplayed(9);
+      if (window.innerWidth < 750) setPageRangeDisplayed(7);
+      if (window.innerWidth < 650) setPageRangeDisplayed(5);
+      if (window.innerWidth < 520) setPageRangeDisplayed(3);
+    };
+    
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -31,14 +39,6 @@ export default function Pagination({
     const params = new URLSearchParams(searchParams);
     params.set('page', (data.selected + 1).toString());
     replace(`${pathname}?${params.toString()}`);
-  };
-
-  const handleResize = () => {
-    if (window.innerWidth >= 850) setPageRangeDisplayed(10);
-    if (window.innerWidth < 850) setPageRangeDisplayed(9);
-    if (window.innerWidth < 750) setPageRangeDisplayed(7);
-    if (window.innerWidth < 650) setPageRangeDisplayed(5);
-    if (window.innerWidth < 520) setPageRangeDisplayed(3);
   };
 
   return (
