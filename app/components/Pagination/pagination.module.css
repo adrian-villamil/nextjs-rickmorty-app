@@ -4,19 +4,21 @@
   margin: 40px 0;
 }
 
-.react-paginate {
+.paginate-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 6px;
 }
 
-.react-paginate li {
-  float: left;
-  margin: 0 4px;
+.paginate-list li {
+  display: flex;
 }
 
-.react-paginate a {
-  display: block;
+.paginate-list a {
+  display: flex;
+  align-items: center;
   padding: 8px 16px;
   color: var(--universe-black);
   border: 1px solid #dddddd;
@@ -25,12 +27,19 @@
   transition: background-color .3s;
 }
 
-.react-paginate a:hover:not(.react-paginate li[class="selected"] > a) {
+.paginate-list a:hover:not(.paginate-list li[class="selected"] > a) {
   background-color: #dddddd;
 }
 
-.react-paginate li[class="selected"] > a {
+.paginate-list li[class="selected"]>a {
   background-color: var(--primary-green);
   color: var(--neutral-background);
   border: 1px solid var(--primary-green);
+}
+
+@media screen and (width < 520px) {
+  .paginate-list a {
+    font-size: 0.8em;
+    padding: 6px 10px;
+  }
 }
