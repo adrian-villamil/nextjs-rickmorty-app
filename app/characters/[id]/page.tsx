@@ -10,7 +10,19 @@ import { GiPlantsAndAnimals } from "react-icons/gi";
 import { MdMonitorHeart } from "react-icons/md";
 import { PiGenderIntersexBold } from "react-icons/pi";
 import { PiTelevisionSimpleBold } from "react-icons/pi";
+import { ApiResponse, Character } from "@/app/types/api-types";
+import { RICK_AND_MORTY_API_URL } from "@/config";
 import styles from './character.module.css';
+
+
+export async function generateStaticParams() {
+  const data: ApiResponse<Character[]> = await fetch(`${RICK_AND_MORTY_API_URL}/character`).then((res) => res.json());
+  const staticCharacters = Array.from({ length: data.info.count }).map((v, i) => `${i + 1}`);
+
+  return staticCharacters.map((id) => ({
+    id,
+  }));
+}
 
 export default async function Page({
   params

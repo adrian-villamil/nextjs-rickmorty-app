@@ -3,7 +3,18 @@ import { getEpisodeById } from "@/app/api/episodes";
 import { BsDashCircleFill } from "react-icons/bs";
 import CharacterList from "@/app/components/CharacterList";
 import { CardListSkeleton } from "@/app/components/Skeletons/cardlist";
+import { ApiResponse, Episode } from "@/app/types/api-types";
+import { RICK_AND_MORTY_API_URL } from "@/config";
 import styles from './episode.module.css';
+
+export async function generateStaticParams() {
+  const data: ApiResponse<Episode[]> = await fetch(`${RICK_AND_MORTY_API_URL}/episode`).then((res) => res.json());
+  const staticEpisodes = Array.from({ length: data.info.count }).map((v, i) => `${i + 1}`);
+
+  return staticEpisodes.map((id) => ({
+    id,
+  }));
+}
 
 export default async function Page({
   params,

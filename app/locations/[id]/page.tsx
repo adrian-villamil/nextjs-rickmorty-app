@@ -3,7 +3,18 @@ import { getLocationById } from "@/app/api/locations";
 import { BsDashCircleFill } from "react-icons/bs";
 import CharacterList from "@/app/components/CharacterList";
 import { CardListSkeleton } from "@/app/components/Skeletons/cardlist";
+import { ApiResponse, Location } from "@/app/types/api-types";
+import { RICK_AND_MORTY_API_URL } from "@/config";
 import styles from './location.module.css';
+
+export async function generateStaticParams() {
+  const data: ApiResponse<Location[]> = await fetch(`${RICK_AND_MORTY_API_URL}/location`).then((res) => res.json());
+  const staticLocations = Array.from({ length: data.info.count }).map((v, i) => `${i + 1}`);
+
+  return staticLocations.map((id) => ({
+    id,
+  }));
+}
 
 export default async function Page({
   params,
