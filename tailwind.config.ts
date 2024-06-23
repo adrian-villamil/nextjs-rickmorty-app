@@ -72,6 +72,13 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      gridTemplateColumns: {
+        "min-1": "repeat(1, minmax(0, min-content))",
+        "min-2": "repeat(2, minmax(0, min-content))",
+        "min-3": "repeat(3, minmax(0, min-content))",
+        "min-4": "repeat(4, minmax(0, min-content))",
+        "min-5": "repeat(5, minmax(0, min-content))",
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
