@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ThemeToggle } from "./theme-toggle";
+import { NavBar } from "./navbar";
 
 const routes = [
   { path: '/characters', label: 'Characters' },
@@ -10,19 +11,20 @@ const routes = [
 export const Header = () => {
   return (
     <div className="border-b">
-      <div className="container flex justify-between items-center max-w-screen-xl min-h-14 mx-auto">
+      <div className="relative container flex justify-between items-center max-w-screen-xl min-h-14 mx-auto">
+        <NavBar className="absolute left-8 sm:hidden" />
         <Link
           href={'/'}
-          className="text-sm font-bold"
+          className="ml-14 sm:ml-0 text-sm font-bold"
         >
           Rick And Morty
         </Link>
-        <div className="space-x-10">
+        <div className="hidden sm:block space-x-10">
           {routes.map(({ path, label }) => (
             <Link
               key={path}
               href={path}
-              className="text-sm font-bold hover:text-green-500"
+              className="text-sm font-bold hover:text-lime-500"
             >
               {label}
             </Link>
