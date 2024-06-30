@@ -1,8 +1,8 @@
 
 export default function LocationsPage() {
   return (
-    <div>
+    <main>
       <h1>Hello Page</h1>
-    </div>
+    </main>
   );
 }
