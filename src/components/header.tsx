@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { ThemeToggle } from "./theme-toggle";
 import { NavBar } from "./navbar";
+import { ThemeToggle } from "./theme-toggle";
 
 const routes = [
   { path: '/characters', label: 'Characters' },
