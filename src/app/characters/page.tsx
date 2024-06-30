@@ -5,11 +5,11 @@ export default async function CharactersPage() {
   const { info, results } = await getPaginatedCharacters();
 
   return (
-    <div>
-      <h1 className="text-center text-5xl my-6">Characters Page</h1>
+    <main className="my-6 px-6">
+      <h1 className="text-center text-4xl sm:text-5xl font-bold mb-6 dark:text-lime-500">Characters</h1>
       <div>
         <CardList characters={results} />
       </div>
-    </div>
+    </main>
   );
 }
