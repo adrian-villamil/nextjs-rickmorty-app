@@ -1,14 +1,28 @@
 import { getPaginatedCharacters } from "@/actions/characters/get-paginated-characters";
 import { CardList } from "@/components/characters/card";
+import { Pagination } from "@/components/pagination";
+import { Search } from "@/components/search";
+import { Title } from "@/components/title";
 
-export default async function CharactersPage() {
-  const { info, results } = await getPaginatedCharacters();
+interface Props {
+  searchParams?: { 
+    page?: string;
+    search?: string; 
+  };
+}
+
+export default async function CharactersPage({ searchParams }: Props) {
+  const page = searchParams?.page ?? '1';
+  const search = searchParams?.search ?? '';
+  const { info, results } = await getPaginatedCharacters(page, search);
 
   return (
-    <main className="my-6 px-6">
-      <h1 className="text-center text-4xl sm:text-5xl font-bold mb-6 dark:text-lime-500">Characters</h1>
-      <div>
+    <main className="max-w-screen-xl my-6 px-6 mx-auto">
+      <Title title="Characters" />
+      <div className="space-y-8">
+        <Search />
         <CardList characters={results} />
+        <Pagination totalPages={info.pages} />
       </div>
     </main>
   );
