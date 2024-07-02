@@ -1,8 +1,9 @@
+import { Title } from "@/components/title";
 
 export default function EpisodesPage() {
   return (
-    <main>
-      <h1>Hello Page</h1>
+    <main className="my-6 px-6">
+      <Title title="Episodes" />
     </main>
   );
 }
