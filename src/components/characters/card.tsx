@@ -9,7 +9,7 @@ interface CardListProps {
 
 export const CardList = ({ characters }: CardListProps) => {
   return (
-    <div className="grid grid-cols-min-1 md:grid-cols-min-2 lg:grid-cols-min-3 xl:grid-cols-min-4 justify-center gap-8 mx-auto">
+    <div className="flex flex-wrap justify-center gap-8">
       {characters.map((character) => (
         <CardItem key={character.id} character={character} />
       ))}
