@@ -50,7 +50,7 @@ export const Pagination = ({ totalPages }: Props) => {
         <PaginationItem>
           <PaginationPrevious
             href={createPageUrl(currentPage - 1)}
-            className={clsx({ 'pointer-events-none bg-zinc-200 opacity-40': currentPage <= 1 })}
+            className={clsx({ 'pointer-events-none text-black/40 dark:text-zinc-600': currentPage <= 1 })}
           />
         </PaginationItem>
         {paginationNumbers.map((page, index) => (
@@ -70,7 +70,7 @@ export const Pagination = ({ totalPages }: Props) => {
         <PaginationItem>
           <PaginationNext
             href={createPageUrl(currentPage + 1)}
-            className={clsx({ 'pointer-events-none bg-zinc-200 opacity-40': currentPage >= totalPages })}
+            className={clsx({ 'pointer-events-none text-black/40 dark:text-zinc-600': currentPage >= totalPages })}
           />
         </PaginationItem>
       </PaginationContent>
