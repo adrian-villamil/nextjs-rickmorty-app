@@ -23,7 +23,7 @@ interface CardItemProps {
 
 export const CardItem = ({ character }: CardItemProps) => {
   return (
-    <div className="flex flex-col w-56 rounded-lg overflow-hidden shadow-md dark:shadow-lime-500/80 hover:shadow-lg transition-all duration-300">
+    <div className="flex flex-col w-56 rounded-lg overflow-hidden shadow-md bg-card dark:shadow-lime-500/80 hover:shadow-lg transition-all duration-300">
       <Link href={`/characters/${character.id}`} className="w-56 h-56 overflow-hidden">
         <Image
           src={character.image}
