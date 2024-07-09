@@ -44,7 +44,7 @@ export const CardItem = ({ character }: CardItemProps) => {
           </Link>
         </div>
         <div className="flex justify-between items-center mt-auto">
-          <span className="text-sm">Gender</span>
+          <span className="text-gray-400 text-sm">Gender</span>
           <span className={clsx(
             "text-sm text-white px-3 py-[2px] rounded-xl",
             { "bg-blue-500": character.gender === 'Male' },
@@ -56,7 +56,7 @@ export const CardItem = ({ character }: CardItemProps) => {
           </span>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-sm">Status</span>
+          <span className="text-gray-400 text-sm">Status</span>
           <span className={clsx(
             "text-sm text-white px-3 py-[2px] rounded-xl",
             { "bg-green-500": character.status === 'Alive' },
