@@ -45,7 +45,7 @@ export default function HomePage() {
       <div>
         <div className="w-fit mx-auto">
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold dark:text-primary">Rick And Morty</h1>
-          <p className="text-muted-foreground text-md sm:text-lg">The official guide to multiverse's craziest adventures</p>
+          <p className="text-muted-foreground text-md sm:text-lg">{"The official guide to multiverse's craziest adventures"}</p>
         </div>
       </div>
       <div className="space-y-16">
