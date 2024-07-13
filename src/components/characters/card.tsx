@@ -1,7 +1,7 @@
-import { Character } from "@/interfaces/character.interface"
-import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
+import { Character } from "@/interfaces/character.interface"
 
 interface CardListProps {
   characters: Character[];
@@ -23,7 +23,7 @@ interface CardItemProps {
 
 export const CardItem = ({ character }: CardItemProps) => {
   return (
-    <div className="flex flex-col w-56 rounded-lg overflow-hidden shadow-md bg-card dark:shadow-lime-500/80 hover:shadow-lg transition-all duration-300">
+    <div className="flex flex-col w-56 border rounded-lg shadow-md hover:shadow-lg overflow-hidden bg-card transition-all duration-300">
       <Link href={`/characters/${character.id}`} className="w-56 h-56 overflow-hidden">
         <Image
           src={character.image}
@@ -38,13 +38,13 @@ export const CardItem = ({ character }: CardItemProps) => {
         <div>
           <Link
             href={`/characters/${character.id}`}
-            className="font-bold text-lime-500"
+            className="font-bold text-sky-400"
           >
             {character.name}
           </Link>
         </div>
         <div className="flex justify-between items-center mt-auto">
-          <span className="text-gray-400 text-sm">Gender</span>
+          <span className="text-muted-foreground text-sm">Gender</span>
           <span className={clsx(
             "text-sm text-white px-3 py-[2px] rounded-xl",
             { "bg-blue-500": character.gender === 'Male' },
@@ -56,7 +56,7 @@ export const CardItem = ({ character }: CardItemProps) => {
           </span>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-gray-400 text-sm">Status</span>
+          <span className="text-muted-foreground text-sm">Status</span>
           <span className={clsx(
             "text-sm text-white px-3 py-[2px] rounded-xl",
             { "bg-green-500": character.status === 'Alive' },
@@ -66,12 +66,6 @@ export const CardItem = ({ character }: CardItemProps) => {
             {character.status}
           </span>
         </div>
-        {/* <Link
-          href={`/characters/${character.id}`}
-          className="text-sm text-white dark:text-black text-center bg-neutral-800 dark:bg-white p-2 rounded-md"
-        >
-          Learn More
-        </Link> */}
       </div>
     </div>
   );
