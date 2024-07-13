@@ -3,6 +3,7 @@ import Link from "next/link";
 import characterImage from '@/assets/images/character-intro-img.png';
 import locationImage from '@/assets/images/location-intro-img.png';
 import episodeImage from '@/assets/images/episode-intro-img.jpg';
+import { buttonVariants } from "@/components/ui/button";
 
 const sections = [
   {
@@ -43,8 +44,8 @@ export default function HomePage() {
     <main className="max-w-screen-xl mx-auto my-10 px-6 space-y-24">
       <div>
         <div className="w-fit mx-auto">
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold dark:text-lime-500">Rick And Morty</h1>
-          <p className="text-md sm:text-lg">The official guide to multiverse's craziest adventures</p>
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold dark:text-primary">Rick And Morty</h1>
+          <p className="text-muted-foreground text-md sm:text-lg">The official guide to multiverse's craziest adventures</p>
         </div>
       </div>
       <div className="space-y-16">
@@ -54,14 +55,16 @@ export default function HomePage() {
             className="flex flex-col md:flex-row md:even:flex-row-reverse items-center gap-10"
           >
             <div className="flex flex-col gap-5">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold dark:text-lime-500">{section.title}</h2>
-              <p className="text-balance text-sm md:text-base lg:text-lg xl:text-xl">{section.description}</p>
-              <Link
-                href={section.linkUrl}
-                className="text-white font-bold bg-sky-500 hover:bg-sky-400 p-3 rounded-md w-fit"
-              >
-                {section.linkLabel}
-              </Link>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold dark:text-primary">{section.title}</h2>
+              <p className="text-balance text-muted-foreground text-sm md:text-base lg:text-lg xl:text-xl">{section.description}</p>
+              <div>
+                <Link
+                  href={section.linkUrl}
+                  className={buttonVariants()}
+                >
+                  {section.linkLabel}
+                </Link>
+              </div>
             </div>
             <Image
               src={section.image}

@@ -5,7 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { ThemeToggle } from "./theme-toggle";
 
@@ -22,7 +22,7 @@ export const Header = () => {
         <MobileNavbar className="absolute left-8 sm:hidden" />
         <Link
           href={'/'}
-          className="ml-14 sm:ml-0 text-sm font-bold"
+          className="ml-14 sm:ml-0 text-sm font-semibold dark:text-primary"
         >
           Rick And Morty
         </Link>
@@ -31,7 +31,7 @@ export const Header = () => {
             <Link
               key={path}
               href={path}
-              className="text-sm font-bold hover:text-lime-500"
+              className={buttonVariants({ variant: 'ghost' })}
             >
               {label}
             </Link>
