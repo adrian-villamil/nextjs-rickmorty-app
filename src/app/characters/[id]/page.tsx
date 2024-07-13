@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import { Clapperboard } from "lucide-react";
 import { getCharacterById } from "@/actions/characters/get-character-by-id";
 import { getEpisodesFromUrls } from "@/actions/episodes/get-episodes-from-urls";
-import { Clapperboard } from "lucide-react";
-import { Suspense } from "react";
 import { EpisodesGridSkeleton } from "@/components/skeletons";
 
 interface Props {
@@ -67,7 +67,7 @@ const CharacterAttribute = ({ label, value, href }: CharacterAttributeProps) => 
       {href ? (
         <Link
           href={`/locations/${href.slice(40)}`}
-          className="text-sm md:text-base text-sky-400"
+          className="text-sm md:text-base text-sky-500"
         >
           {value}
         </Link>
@@ -95,7 +95,7 @@ const EpisodesGrid = async ({ episodesUrls }: EpisodesGridProps) => {
           <Clapperboard className="w-4 h-4 flex-none sm:w-5 sm:h-5 md:w-6 md:h-6 stroke-gray-400" />
           <Link
             href={`/episodes/${episode.id}`}
-            className="text-sm sm:text-base text-sky-400 text-ellipsis overflow-hidden whitespace-nowrap"
+            className="text-sm sm:text-base text-sky-500 text-ellipsis overflow-hidden whitespace-nowrap"
             title={episode.name}
           >
             {episode.name}

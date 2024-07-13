@@ -38,7 +38,7 @@ export const CardItem = ({ character }: CardItemProps) => {
         <div>
           <Link
             href={`/characters/${character.id}`}
-            className="font-bold text-sky-400"
+            className="font-bold text-sky-500"
           >
             {character.name}
           </Link>

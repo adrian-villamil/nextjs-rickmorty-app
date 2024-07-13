@@ -29,7 +29,7 @@ export const CardItem = ({ episode }: CardItemProps) => {
         </div>
         <Link
           href={`/episodes/${episode.id}`}
-          className="font-bold text-sky-400 leading-tight"
+          className="font-bold text-sky-500 leading-tight"
         >
           {episode.name}
         </Link>

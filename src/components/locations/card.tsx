@@ -29,7 +29,7 @@ export const CardItem = ({ location }: CardItemProps) => {
         </div>
         <Link
           href={`/locations/${location.id}`}
-          className="font-bold text-sky-400 leading-tight"
+          className="font-bold text-sky-500 leading-tight"
         >
           {location.name}
         </Link>

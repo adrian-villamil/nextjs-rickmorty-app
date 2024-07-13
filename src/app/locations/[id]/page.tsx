@@ -1,8 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getEpisodeById } from "@/actions/episodes/get-episode-by-id";
-import { getCharactersFromUrls } from "@/actions/characters/get-characters-from-urls";
 import { Suspense } from "react";
 import { getLocationById } from "@/actions/locations/get-location-by-id";
 import { CharactersGridSkeleton } from "@/components/skeletons";
