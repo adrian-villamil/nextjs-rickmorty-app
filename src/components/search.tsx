@@ -9,6 +9,12 @@ export const Search = () => {
   const searchParams = useSearchParams();
   const { replace } = useRouter();
 
+  const getPlaceholder: Record<string, string> = {
+    '/characters': 'Search character...',
+    '/locations': 'Search location...',
+    '/episodes': 'Search episode...',
+  };
+
   const handleChange = useDebouncedCallback((value: string) => {
     const params = new URLSearchParams(searchParams);
     params.set('page', '1');
@@ -27,7 +33,7 @@ export const Search = () => {
       type="text"
       defaultValue={searchParams.get('search')?.toString()}
       onChange={(event) => handleChange(event.target.value)}
-      placeholder="Search character..."
+      placeholder={getPlaceholder[pathname]}
       className="w-full sm:w-9/12 mx-auto"
     />
 
