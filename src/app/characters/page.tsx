@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getPaginatedCharacters } from "@/actions/characters/get-paginated-characters";
 import { CardList } from "@/components/characters/card";
 import { Pagination } from "@/components/pagination";
@@ -10,6 +11,11 @@ interface Props {
     search?: string; 
   };
 }
+
+export const metadata: Metadata = {
+  title: 'Characters Page',
+  description: 'Page where list all characters from the rick and morty tv show',
+};
 
 export default async function CharactersPage({ searchParams }: Props) {
   const page = searchParams?.page ?? '1';

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getPaginatedEpisodes } from "@/actions/episodes/get-paginated-episodes";
 import { CardList } from "@/components/episodes/card";
 import { Pagination } from "@/components/pagination";
@@ -10,6 +11,11 @@ interface Props {
     search?: string;
   }
 }
+
+export const metadata: Metadata = {
+  title: 'Episodes Page',
+  description: 'Page where list all episodes from the rick and morty tv show',
+};
 
 export default async function EpisodesPage({ searchParams }: Props) {
   const page = searchParams?.page ?? '1';

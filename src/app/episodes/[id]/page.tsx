@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getEpisodeById } from "@/actions/episodes/get-episode-by-id";
 import { CharactersGridSkeleton } from "@/components/skeletons";
@@ -6,6 +7,15 @@ import { CharacterAvatarGrid } from "@/components/character-avatar-grid";
 
 interface Props {
   params: { id: string };
+}
+
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const episode = await getEpisodeById(params.id);
+
+  return {
+    title: episode?.name,
+    description: 'Description page info',
+  };
 }
 
 export default async function EpisodePage({ params }: Props) {

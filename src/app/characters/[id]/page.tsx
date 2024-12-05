@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Clapperboard } from "lucide-react";
 import { getCharacterById } from "@/actions/characters/get-character-by-id";
@@ -10,6 +11,15 @@ import { EpisodesGridSkeleton } from "@/components/skeletons";
 interface Props {
   params: { id: string };
 }
+
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const character = await getCharacterById(params.id);
+
+  return {
+    title: character?.name,
+    description: 'Character page info',
+  };
+};
 
 export default async function CharacterPage({ params }: Props) {
   const character = await getCharacterById(params.id);

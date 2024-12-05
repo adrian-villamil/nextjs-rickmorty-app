@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getPaginatedLocations } from "@/actions/locations/get-paginated-locations";
 import { CardList } from "@/components/locations/card";
 import { Pagination } from "@/components/pagination";
@@ -10,6 +11,11 @@ interface Props {
     search?: string;
   }
 }
+
+export const metadata: Metadata = {
+  title: 'Locations Page',
+  description: 'Page where list all locations from the rick and morty tv show',
+};
 
 export default async function LocationsPage({ searchParams }: Props) {
   const page = searchParams?.page ?? '1';

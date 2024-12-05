@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getLocationById } from "@/actions/locations/get-location-by-id";
 import { CharactersGridSkeleton } from "@/components/skeletons";
@@ -6,6 +7,15 @@ import { CharacterAvatarGrid } from "@/components/character-avatar-grid";
 
 interface Props {
   params: { id: string };
+}
+
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const location = await getLocationById(params.id);
+
+  return {
+    title: location?.name,
+    description: 'Location page info',
+  };
 }
 
 export default async function LocationPage({ params }: Props) {

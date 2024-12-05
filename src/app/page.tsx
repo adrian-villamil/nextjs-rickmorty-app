@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import characterImage from '@/assets/images/character-intro-img.png';
 import locationImage from '@/assets/images/location-intro-img.png';
 import episodeImage from '@/assets/images/episode-intro-img.jpg';
@@ -38,6 +39,11 @@ const sections = [
     linkUrl: '/episodes'
   },
 ];
+
+export const metadata: Metadata = {
+  title: 'Rick And Morty App',
+  description: 'Rick and morty app that fetch and display data from the rick and morty api (rickandmortyapi.com)',
+};
 
 export default function HomePage() {
   return (
