@@ -31,7 +31,7 @@ export const CharacterAvatarGrid = async ({ charactersUrls }: Props) => {
           <div className="flex flex-col overflow-hidden">
             <Link
               href={`/characters/${character.id}`}
-              className="text-sm sm:text-base text-sky-500 text-ellipsis whitespace-nowrap overflow-hidden"
+              className="text-sm sm:text-base text-sky-500 text-ellipsis hover:underline hover:underline-offset-2 whitespace-nowrap overflow-hidden"
               title={character.name}
             >
               {character.name}

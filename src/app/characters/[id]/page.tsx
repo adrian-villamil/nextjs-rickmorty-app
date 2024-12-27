@@ -77,7 +77,7 @@ const CharacterAttribute = ({ label, value, href }: CharacterAttributeProps) => 
       {href ? (
         <Link
           href={`/locations/${href.slice(40)}`}
-          className="text-sm md:text-base text-sky-500"
+          className="text-sm md:text-base text-sky-500 hover:underline hover:underline-offset-2"
         >
           {value}
         </Link>
@@ -105,7 +105,7 @@ const EpisodesGrid = async ({ episodesUrls }: EpisodesGridProps) => {
           <Clapperboard className="w-4 h-4 flex-none sm:w-5 sm:h-5 md:w-6 md:h-6 stroke-gray-400" />
           <Link
             href={`/episodes/${episode.id}`}
-            className="text-sm sm:text-base text-sky-500 text-ellipsis overflow-hidden whitespace-nowrap"
+            className="text-sm sm:text-base text-sky-500 text-ellipsis hover:underline hover:underline-offset-2 overflow-hidden whitespace-nowrap"
             title={episode.name}
           >
             {episode.name}

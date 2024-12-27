@@ -23,7 +23,7 @@ interface CardItemProps {
 
 export const CardItem = ({ character }: CardItemProps) => {
   return (
-    <div className="flex flex-col w-56 border rounded-lg shadow-md hover:shadow-lg overflow-hidden bg-card transition-all duration-300">
+    <div className="flex flex-col w-56 border rounded-xl shadow-md hover:shadow-lg overflow-hidden bg-card transition-all duration-300">
       <Link href={`/characters/${character.id}`} className="w-56 h-56 overflow-hidden">
         <Image
           src={character.image}
@@ -38,7 +38,7 @@ export const CardItem = ({ character }: CardItemProps) => {
         <div>
           <Link
             href={`/characters/${character.id}`}
-            className="font-bold text-sky-500"
+            className="font-bold text-primary hover:underline hover:underline-offset-2"
           >
             {character.name}
           </Link>
