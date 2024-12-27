@@ -10,9 +10,9 @@ export const Search = () => {
   const { replace } = useRouter();
 
   const getPlaceholder: Record<string, string> = {
-    '/characters': 'Search character...',
-    '/locations': 'Search location...',
-    '/episodes': 'Search episode...',
+    '/characters': 'character',
+    '/locations': 'location',
+    '/episodes': 'episode',
   };
 
   const handleChange = useDebouncedCallback((value: string) => {
@@ -20,9 +20,9 @@ export const Search = () => {
     params.set('page', '1');
 
     if (value) {
-      params.set('search', value);
+      params.set('name', value);
     } else {
-      params.delete('search');
+      params.delete('name');
     }
 
     replace(`${pathname}?${params.toString()}`);
@@ -33,9 +33,7 @@ export const Search = () => {
       type="text"
       defaultValue={searchParams.get('search')?.toString()}
       onChange={(event) => handleChange(event.target.value)}
-      placeholder={getPlaceholder[pathname]}
-      className="w-full sm:w-9/12 mx-auto"
+      placeholder={`Search ${getPlaceholder[pathname]} by name...`}
     />
-
-  )
+  );
 }
